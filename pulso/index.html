@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08080F">
+  <title>Pulso — La IA, sin filtros.</title>
+  <meta name="description" content="Portal de inteligencia artificial: comparador de modelos, herramientas, análisis editorial y glosario. La IA, sin filtros.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://pulso.ai/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pulso.ai/">
+  <meta property="og:title" content="Pulso — La IA, sin filtros.">
+  <meta property="og:description" content="Comparador de modelos, herramientas de IA, análisis editorial y glosario técnico. Todo lo que necesitas saber sobre IA, ahora.">
+  <meta property="og:image" content="https://pulso.ai/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@pulsoai">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css?v=20260610">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     GRAIN + AURORA
+═══════════════════════════════════════════ -->
+<svg style="display:none" aria-hidden="true">
+  <filter id="noise-filter">
+    <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+    <feColorMatrix type="saturate" values="0"/>
+  </filter>
+</svg>
+<div id="grain" aria-hidden="true"></div>
+
+<div id="aurora" aria-hidden="true">
+  <div class="aurora-blob a1"></div>
+  <div class="aurora-blob a2"></div>
+  <div class="aurora-blob a3"></div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SPLASH
+═══════════════════════════════════════════ -->
+<div id="splash" aria-live="polite" aria-label="Cargando Pulso">
+  <div class="splash-inner">
+    <div class="splash-letters" aria-hidden="true">
+      <span>P</span><span class="dot">·</span>
+      <span>U</span><span class="dot">·</span>
+      <span>L</span><span class="dot">·</span>
+      <span>S</span><span class="dot">·</span>
+      <span>O</span>
+    </div>
+    <div class="splash-bar-wrap"><div class="splash-bar"></div></div>
+    <p class="splash-sub">Portal de Inteligencia Artificial · 2026</p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     CUSTOM CURSOR
+═══════════════════════════════════════════ -->
+<div id="cursor" aria-hidden="true">
+  <div class="cur-ring"></div>
+  <div class="cur-dot"></div>
+  <div class="cur-label"></div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SIDE BRAND
+═══════════════════════════════════════════ -->
+<div id="side-brand" aria-hidden="true">
+  <span class="side-pulse-dot"></span>
+  <span class="side-text">PULSO.AI · ES · IA + TECH · 2026</span>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════════ -->
+<nav id="nav" role="navigation" aria-label="Navegación principal">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo" aria-label="Pulso — Inicio">
+      <span class="logo-word">Pulso</span><span class="logo-dot" aria-hidden="true"></span>
+    </a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="#news"       data-label="leer">01 · Noticias</a></li>
+      <li><a href="#comparator" data-label="comparar">02 · Modelos</a></li>
+      <li><a href="#tools"      data-label="explorar">03 · Herramientas</a></li>
+      <li><a href="#analysis"   data-label="analizar">04 · Análisis</a></li>
+      <li><a href="#newsletter" data-label="suscribir">05 · Newsletter</a></li>
+      <li><a href="#glossary"   data-label="buscar">06 · Glosario</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <a href="#newsletter" class="nav-cta" data-label="suscribir">
+        <span>Newsletter</span>
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div id="mobile-menu" aria-hidden="true" role="dialog" aria-label="Menú móvil">
+  <ul role="list">
+    <li><a href="#news"       data-label="leer">01 · Noticias</a></li>
+    <li><a href="#comparator" data-label="comparar">02 · Modelos</a></li>
+    <li><a href="#tools"      data-label="explorar">03 · Herramientas</a></li>
+    <li><a href="#analysis"   data-label="analizar">04 · Análisis</a></li>
+    <li><a href="#newsletter" data-label="suscribir">05 · Newsletter</a></li>
+    <li><a href="#glossary"   data-label="buscar">06 · Glosario</a></li>
+  </ul>
+  <a href="#newsletter" class="mob-cta">Suscribirse al newsletter →</a>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════ -->
+<section id="hero" aria-label="Hero">
+  <canvas id="neural-canvas" aria-hidden="true"></canvas>
+  <div class="hero-content">
+    <p class="hero-kicker reveal" data-es="Portal de IA en español · 2026" data-en="AI Portal in Spanish · 2026">
+      Portal de IA en español · 2026
+    </p>
+    <h1 class="hero-title reveal" aria-label="Pulso.">
+      <span class="ht-left">Pul</span><span class="ht-right">so.</span>
+    </h1>
+    <p class="hero-tagline reveal" id="hero-tagline" data-es="La IA, sin filtros." data-en="AI, without the noise.">
+      La IA, sin filtros.
+    </p>
+    <div class="hero-ctas reveal">
+      <a href="#tools"      class="btn-primary"   data-label="explorar">Explorar herramientas →</a>
+      <a href="#comparator" class="btn-secondary"  data-label="comparar">Comparar modelos</a>
+    </div>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">
+    <span>scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     TICKER
+═══════════════════════════════════════════ -->
+<div class="ticker-wrap" aria-hidden="true" role="marquee">
+  <div class="ticker-track" id="ticker-track"><!-- JS fills --></div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     01 · NOTICIAS
+═══════════════════════════════════════════ -->
+<section id="news" class="s-news" aria-labelledby="news-title">
+  <div class="sec-num" aria-hidden="true">01</div>
+  <div class="container">
+    <div class="sec-header reveal">
+      <h2 class="sec-title" id="news-title">Lo último</h2>
+      <a href="#" class="sec-link">Ver todas →</a>
+    </div>
+    <div class="news-grid" id="news-grid" aria-label="Artículos recientes">
+      <!-- JS renders from manifest -->
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     02 · COMPARADOR DE MODELOS
+═══════════════════════════════════════════ -->
+<section id="comparator" class="s-comparator" aria-labelledby="comp-title">
+  <div class="sec-num" aria-hidden="true">02</div>
+  <div class="comp-header">
+    <div class="container">
+      <h2 class="sec-title reveal" id="comp-title">Comparador de Modelos</h2>
+      <p class="comp-sub reveal">Benchmarks, precios y contexto. Elige con datos.</p>
+    </div>
+    <div class="comp-counter" aria-live="polite">
+      <span id="comp-curr">01</span><span class="comp-sep">/</span><span id="comp-tot">10</span>
+    </div>
+  </div>
+
+  <!-- Desktop: horizontal pin scroll. Mobile: overflow-x scroll-snap -->
+  <div class="comp-viewport" id="comp-viewport">
+    <div class="comp-track" id="comp-track" role="list" aria-label="Modelos de IA">
+      <!-- JS renders 10 model cards -->
+    </div>
+  </div>
+
+  <!-- Bench ticker (reverse direction) -->
+  <div class="bench-ticker" aria-hidden="true">
+    <div class="bench-track">
+      MMLU · HumanEval · MATH · Context Window · Velocidad · Precio · Razonamiento · Código · Multimodal · Seguridad ·&nbsp;
+      MMLU · HumanEval · MATH · Context Window · Velocidad · Precio · Razonamiento · Código · Multimodal · Seguridad ·&nbsp;
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     03 · HERRAMIENTAS
+═══════════════════════════════════════════ -->
+<section id="tools" class="s-tools" aria-labelledby="tools-title">
+  <div class="sec-num" aria-hidden="true">03</div>
+  <div class="container">
+    <div class="sec-header reveal">
+      <h2 class="sec-title" id="tools-title">Herramientas de IA</h2>
+      <p class="sec-sub">16 herramientas seleccionadas · 8 categorías</p>
+    </div>
+    <div class="tools-filters reveal" id="tools-filters" role="toolbar" aria-label="Filtrar por categoría">
+      <!-- JS renders filter buttons from toolCategories -->
+    </div>
+    <div class="tools-grid" id="tools-grid" aria-label="Herramientas">
+      <!-- JS renders tool cards -->
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     04 · ANÁLISIS
+═══════════════════════════════════════════ -->
+<section id="analysis" class="s-analysis" aria-labelledby="analysis-title">
+  <div class="sec-num" aria-hidden="true">04</div>
+
+  <!-- Decorative text marquees -->
+  <div class="analysis-marquees" aria-hidden="true">
+    <div class="mq mq1"><div class="mq-track">ANÁLISIS · OPINIÓN · TENDENCIAS · INDUSTRIA · INVESTIGACIÓN · DATOS ·&nbsp;</div></div>
+    <div class="mq mq2"><div class="mq-track mq-rev">FUTURO · ÉTICA · REGULACIÓN · MODELOS · AGENTES · MULTIMODAL ·&nbsp;</div></div>
+    <div class="mq mq3"><div class="mq-track">OPEN SOURCE · BENCHMARK · SEGURIDAD · ALINEACIÓN · INFERENCIA ·&nbsp;</div></div>
+  </div>
+
+  <div class="container">
+    <div class="sec-header reveal">
+      <h2 class="sec-title" id="analysis-title">Análisis editorial</h2>
+    </div>
+    <div class="analysis-grid" id="analysis-grid" aria-label="Artículos de análisis">
+      <!-- JS renders from manifest.articles -->
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     05 · NEWSLETTER
+═══════════════════════════════════════════ -->
+<section id="newsletter" class="s-newsletter" aria-labelledby="nl-title">
+  <div class="sec-num" aria-hidden="true">05</div>
+  <div class="container">
+    <div class="nl-inner reveal">
+      <div class="nl-copy">
+        <p class="nl-kicker">Cada martes · Gratis</p>
+        <h2 class="nl-title" id="nl-title">El Brief de Pulso</h2>
+        <p class="nl-desc">
+          Los 5 avances de IA que importaron esta semana, explicados en menos de 3 minutos.
+          Sin hype, sin relleno. La señal, no el ruido.
+        </p>
+        <ul class="nl-benefits" role="list">
+          <li><span aria-hidden="true">✦</span> Comparativas de modelos actualizadas</li>
+          <li><span aria-hidden="true">✦</span> Alertas de herramientas nuevas</li>
+          <li><span aria-hidden="true">✦</span> Análisis exclusivo en profundidad</li>
+        </ul>
+      </div>
+      <div class="nl-form-wrap">
+        <form class="nl-form" id="nl-form" novalidate aria-label="Formulario de suscripción">
+          <div class="nl-input-wrap">
+            <label for="nl-email" class="sr-only">Tu email</label>
+            <input
+              type="email"
+              id="nl-email"
+              name="email"
+              placeholder="tu@email.com"
+              autocomplete="email"
+              required
+              aria-required="true"
+              aria-describedby="nl-error"
+            >
+            <button type="submit" class="nl-submit" aria-label="Suscribirse">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+          <p class="nl-error" id="nl-error" role="alert" aria-live="polite"></p>
+          <p class="nl-privacy">Sin spam. Baja cuando quieras. <a href="#">Política de privacidad</a></p>
+        </form>
+        <div class="nl-success" id="nl-success" hidden aria-live="polite">
+          <div class="nl-success-icon" aria-hidden="true">✦</div>
+          <p>¡Suscripción confirmada! Te llegará el próximo martes.</p>
+        </div>
+        <div class="nl-stats">
+          <span><strong>4.200+</strong> lectores</span>
+          <span><strong>47%</strong> tasa de apertura</span>
+          <span><strong>★ 4.9</strong> valoración</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     06 · GLOSARIO
+═══════════════════════════════════════════ -->
+<section id="glossary" class="s-glossary" aria-labelledby="glossary-title">
+  <div class="sec-num" aria-hidden="true">06</div>
+  <div class="container">
+    <div class="sec-header reveal">
+      <h2 class="sec-title" id="glossary-title">Glosario de IA</h2>
+      <p class="sec-sub">30 términos que necesitas conocer</p>
+    </div>
+    <div class="glossary-search-wrap reveal">
+      <label for="glossary-search" class="sr-only">Buscar término</label>
+      <input
+        type="search"
+        id="glossary-search"
+        placeholder="Buscar término… (ej: token, RAG, fine-tuning)"
+        aria-label="Buscar en el glosario"
+        autocomplete="off"
+      >
+      <svg class="search-icon" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+        <circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M12.5 12.5L16 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="glossary-list" id="glossary-list" role="list" aria-label="Términos del glosario">
+      <!-- JS renders from manifest.glossary -->
+    </div>
+    <p class="glossary-empty" id="glossary-empty" hidden>No se encontraron términos para "<span id="glossary-query"></span>".</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════ -->
+<footer id="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#hero" class="footer-logo" aria-label="Pulso — volver al inicio">
+          Pulso<span class="logo-dot" aria-hidden="true"></span>
+        </a>
+        <p class="footer-tagline">La señal, no el ruido.</p>
+        <div class="footer-social">
+          <a href="https://twitter.com/pulsoai" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X de Pulso">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+              <path d="M2.5 2.5L15.5 15.5M15.5 2.5L2.5 15.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </a>
+          <a href="https://linkedin.com/company/pulsoai" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Pulso">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+              <rect x="2" y="2" width="14" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M6 8v5M6 5.5v.5M9 13v-3a1.5 1.5 0 013 0v3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </a>
+          <a href="/rss.xml" aria-label="RSS de Pulso">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+              <circle cx="5" cy="13" r="1.5" fill="currentColor"/>
+              <path d="M4 9a5 5 0 015 5M4 5a9 9 0 019 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Navegación del pie">
+        <div class="footer-col">
+          <h3>Explorar</h3>
+          <ul role="list">
+            <li><a href="#news">Noticias</a></li>
+            <li><a href="#comparator">Comparador</a></li>
+            <li><a href="#tools">Herramientas</a></li>
+            <li><a href="#analysis">Análisis</a></li>
+            <li><a href="#glossary">Glosario</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Modelos</h3>
+          <ul role="list">
+            <li><a href="#comparator">GPT-4o</a></li>
+            <li><a href="#comparator">Claude 3.7</a></li>
+            <li><a href="#comparator">Gemini 2.5</a></li>
+            <li><a href="#comparator">DeepSeek R1</a></li>
+            <li><a href="#comparator">Llama 4</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Pulso</h3>
+          <ul role="list">
+            <li><a href="#newsletter">Newsletter</a></li>
+            <li><a href="#">Sobre nosotros</a></li>
+            <li><a href="#">Privacidad</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Pulso · La IA, sin filtros.</p>
+      <p class="footer-tech">Hecho con <span aria-label="HTML puro">HTML</span> + <span aria-label="CSS">CSS</span> + <span aria-label="JavaScript">JS</span></p>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════
+     SCRIPTS — defer, IIFE, no modules
+═══════════════════════════════════════════ -->
+<script src="lib/manifest.js?v=20260610" defer></script>
+<!-- GSAP via CDN — replace with local lib/gsap.min.js + lib/ScrollTrigger.min.js for offline -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="js/app.js?v=20260610" defer></script>
+<script src="js/comparator.js?v=20260610" defer></script>
+<script src="js/tools.js?v=20260610" defer></script>
+<script src="js/glossary.js?v=20260610" defer></script>
+
+</body>
+</html>

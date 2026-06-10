@@ -1,0 +1,68 @@
+import type { Category } from "@/types";
+
+export const CATEGORIES: Category[] = [
+  {
+    slug: "escritura-ia",
+    name: "Escritura IA",
+    description: "Asistentes de escritura, redacción y contenido con inteligencia artificial",
+    icon: "✍️",
+    count: 12,
+    color: "#6366F1",
+  },
+  {
+    slug: "generacion-imagenes",
+    name: "Generación de Imágenes",
+    description: "Herramientas para crear y editar imágenes con IA",
+    icon: "🎨",
+    count: 8,
+    color: "#A78BFA",
+  },
+  {
+    slug: "automatizacion",
+    name: "Automatización",
+    description: "Automatiza flujos de trabajo y tareas repetitivas con IA",
+    icon: "⚡",
+    count: 10,
+    color: "#22D3EE",
+  },
+  {
+    slug: "asistentes-virtuales",
+    name: "Asistentes Virtuales",
+    description: "Chatbots y asistentes inteligentes para productividad",
+    icon: "🤖",
+    count: 15,
+    color: "#34D399",
+  },
+  {
+    slug: "analisis-datos",
+    name: "Análisis de Datos",
+    description: "IA para visualización, análisis y business intelligence",
+    icon: "📊",
+    count: 7,
+    color: "#FBBF24",
+  },
+  {
+    slug: "codigo",
+    name: "Código e Ingeniería",
+    description: "Asistentes de programación y desarrollo de software con IA",
+    icon: "💻",
+    count: 9,
+    color: "#F87171",
+  },
+  {
+    slug: "video-audio",
+    name: "Vídeo y Audio",
+    description: "Herramientas IA para producción y edición de vídeo y audio",
+    icon: "🎬",
+    count: 6,
+    color: "#FB923C",
+  },
+  {
+    slug: "marketing",
+    name: "Marketing",
+    description: "IA para campañas, copywriting, SEO y redes sociales",
+    icon: "📣",
+    count: 11,
+    color: "#EC4899",
+  },
+];
