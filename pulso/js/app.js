@@ -306,7 +306,8 @@
 
     grid.innerHTML = articles.map(function (a, i) {
       var feat = a.featured ? ' featured' : '';
-      return '<article class="news-card reveal' + feat + '" style="transition-delay:' + (i * .1) + 's">' +
+      var href = a.url ? a.url : '#';
+      return '<a href="' + href + '" class="news-card reveal' + feat + '" style="transition-delay:' + (i * .1) + 's;text-decoration:none">' +
         (a.featured ? '<div class="news-accent-bar" style="background:' + a.accent + '"></div>' : '') +
         '<div class="nc-body">' +
           '<div class="news-meta">' +
@@ -317,7 +318,7 @@
           (a.excerpt ? '<p class="news-excerpt">' + esc(a.excerpt) + '</p>' : '') +
           '<span class="news-read">' + a.readTime + ' min de lectura →</span>' +
         '</div>' +
-      '</article>';
+      '</a>';
     }).join('');
   }
 
@@ -330,7 +331,8 @@
 
     grid.innerHTML = articles.map(function (a, i) {
       var feat = a.featured ? ' featured' : '';
-      return '<article class="article-card reveal' + feat + '" style="transition-delay:' + (i * .1) + 's">' +
+      var href = a.url ? a.url : '#';
+      return '<a href="' + href + '" class="article-card reveal' + feat + '" style="transition-delay:' + (i * .1) + 's;text-decoration:none">' +
         '<div class="article-meta">' +
           '<span class="article-tag">' + esc(a.tag) + '</span>' +
           '<span class="article-time">' + a.readTime + ' min</span>' +
@@ -338,7 +340,7 @@
         '<h3 class="article-title">' + esc(a.title) + '</h3>' +
         '<p class="article-excerpt">' + esc(a.excerpt) + '</p>' +
         '<span class="article-cta">Leer análisis completo →</span>' +
-      '</article>';
+      '</a>';
     }).join('');
   }
 

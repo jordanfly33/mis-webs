@@ -222,44 +222,59 @@ window.__PULSO__ = {
 
   articles: [
     {
-      id: "razonamiento-modelos",
-      title: "El año del razonamiento: cómo los modelos o1 cambiaron la IA para siempre",
-      excerpt: "Cuando OpenAI presentó o1, muchos lo vieron como un truco. Doce meses después, el razonamiento en cadena es el nuevo estándar de la industria.",
-      tag: "Análisis",
-      readTime: 8,
-      date: "2026-06-01",
+      id: "ganar-dinero-con-ia",
+      title: "Cómo ganar dinero con inteligencia artificial en 2026: 12 métodos reales",
+      excerpt: "Separamos los métodos que realmente funcionan de los que son humo, con ingresos realistas y primeros pasos concretos para cada uno.",
+      tag: "Negocio",
+      readTime: 14,
+      date: "2026-06-10",
       featured: true,
-      accent: "#6C63FF"
+      accent: "#B89A5C",
+      url: "articulos/ganar-dinero-con-ia.html"
     },
     {
-      id: "deepseek-shock",
-      title: "El shock DeepSeek: cómo un modelo chino de $6M igualó a GPT-4",
-      excerpt: "La historia completa de cómo DeepSeek R1 demostró que la eficiencia puede vencer al escalado bruto, y qué significa para el futuro de la IA abierta.",
-      tag: "Industria",
+      id: "mejores-herramientas-ia-2026",
+      title: "Las 10 mejores herramientas de IA en 2026 (gratuitas y de pago)",
+      excerpt: "Hemos analizado más de 60 herramientas para seleccionar las 10 que realmente merecen tu tiempo y dinero: código, imagen, vídeo, productividad y más.",
+      tag: "Listado",
       readTime: 12,
-      date: "2026-05-18",
+      date: "2026-06-10",
       featured: true,
-      accent: "#0EA5E9"
+      accent: "#6C63FF",
+      url: "articulos/mejores-herramientas-ia-2026.html"
     },
     {
-      id: "agentes-2025",
-      title: "Los 10 frameworks de agentes que definen 2026",
-      excerpt: "De LangChain a AutoGen, pasando por CrewAI y Dify: la guía definitiva para elegir el stack de agentes correcto para tu caso de uso.",
+      id: "que-es-chatgpt",
+      title: "Qué es ChatGPT y para qué sirve en 2026",
+      excerpt: "ChatGPT explicado desde cero: cómo funciona, versiones gratuita y Plus, para qué sirve en el trabajo y cuáles son sus limitaciones reales.",
       tag: "Guía",
-      readTime: 15,
-      date: "2026-05-05",
+      readTime: 8,
+      date: "2026-06-10",
       featured: false,
-      accent: "#D4A754"
+      accent: "#0EA5E9",
+      url: "articulos/que-es-chatgpt.html"
     },
     {
-      id: "opensource-vs-closed",
-      title: "Open source vs. closed source: el debate que define la IA de los próximos cinco años",
-      excerpt: "Meta, Google y Microsoft han apostado por abrir sus modelos. OpenAI y Anthropic se resisten. Analizamos quién tiene razón y por qué.",
-      tag: "Opinión",
+      id: "mejores-prompts-chatgpt",
+      title: "Los 50 mejores prompts para ChatGPT en 2026",
+      excerpt: "Prompts listos para copiar y pegar organizados por categoría: trabajo, escritura, código, marketing, estudio y creatividad. Optimizados para GPT-4o.",
+      tag: "Guía práctica",
       readTime: 10,
-      date: "2026-04-20",
+      date: "2026-06-10",
       featured: false,
-      accent: "#34A853"
+      accent: "#34A853",
+      url: "articulos/mejores-prompts-chatgpt.html"
+    },
+    {
+      id: "midjourney-vs-dalle-3",
+      title: "Midjourney vs DALL-E 3: ¿cuál genera mejores imágenes en 2026?",
+      excerpt: "Comparativa completa con benchmarks reales de calidad, precio, facilidad de uso y casos de uso. Veredicto claro para cada perfil.",
+      tag: "Comparativa",
+      readTime: 9,
+      date: "2026-06-10",
+      featured: false,
+      accent: "#D4A754",
+      url: "articulos/midjourney-vs-dalle-3.html"
     }
   ],
 
