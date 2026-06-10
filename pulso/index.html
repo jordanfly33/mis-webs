@@ -25,11 +25,26 @@
 
   <link rel="stylesheet" href="css/style.css?v=20260610">
 
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9896340574339321"
-       crossorigin="anonymous"></script>
+  <!-- AdSense se carga condicionalmente via js/consent.js (GDPR) -->
 </head>
 <body>
+
+<!-- ═══════════════════════════════════════════
+     COOKIE BANNER
+═══════════════════════════════════════════ -->
+<div id="cookie-banner" hidden role="dialog" aria-live="polite" aria-label="Aviso de cookies">
+  <div class="cookie-inner">
+    <div class="cookie-text">
+      <p class="cookie-title">🍪 Usamos cookies</p>
+      <p class="cookie-desc">Utilizamos cookies propias y de terceros (Google AdSense) para personalizar anuncios y analizar el tráfico. Puedes aceptarlas todas o solo las esenciales.</p>
+    </div>
+    <div class="cookie-actions">
+      <button id="cookie-accept-all"       class="cookie-btn cookie-btn-primary">Aceptar todo</button>
+      <button id="cookie-accept-essential" class="cookie-btn cookie-btn-secondary">Solo esenciales</button>
+      <button id="cookie-more-info"        class="cookie-btn cookie-btn-link">Más info</button>
+    </div>
+  </div>
+</div>
 
 <!-- ═══════════════════════════════════════════
      GRAIN + AURORA
@@ -457,6 +472,7 @@
 <!-- ═══════════════════════════════════════════
      SCRIPTS — defer, IIFE, no modules
 ═══════════════════════════════════════════ -->
+<script src="js/consent.js?v=20260610" defer></script>
 <script src="lib/manifest.js?v=20260610" defer></script>
 <!-- GSAP via CDN — replace with local lib/gsap.min.js + lib/ScrollTrigger.min.js for offline -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
