@@ -245,6 +245,24 @@
   font-size: .9rem !important;
 }
 
+/* ── Affiliate CTA button in tool entries ───── */
+.tool-entry-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  margin-top: .75rem;
+  padding: .5rem 1.1rem;
+  border-radius: 999px;
+  background: var(--accent-dim);
+  color: var(--accent);
+  font-family: var(--f-mono);
+  font-size: .75rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background var(--t);
+}
+.tool-entry-cta:hover { background: rgba(184,154,92,.2); }
+
 /* ── Related articles ──────────────────────── */
 .art-related {
   margin-top: 3.5rem;
