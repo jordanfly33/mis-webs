@@ -79,7 +79,8 @@
     if (btnAll)  btnAll.addEventListener('click',  acceptAll);
     if (btnEss)  btnEss.addEventListener('click',  acceptEssential);
     if (btnInfo) btnInfo.addEventListener('click', function () {
-      window.location.href = 'privacidad.html';
+      var base = window.location.pathname.indexOf('/articulos/') !== -1 ? '../' : '';
+      window.location.href = base + 'privacidad.html';
     });
   }
 

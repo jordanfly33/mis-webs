@@ -191,21 +191,21 @@ window.__PULSO__ = {
 
   tools: [
     { id: "chatgpt",    name: "ChatGPT",         cat: "escritura",    tagline: "El asistente que democratizó la IA",  pulsoscore: 9.2, free: true,  url: "https://chat.openai.com",         emoji: "💬" },
-    { id: "jasper",     name: "Jasper",           cat: "escritura",    tagline: "Copywriting de alto rendimiento",    pulsoscore: 8.1, free: false, url: "https://jasper.ai",               emoji: "✍️",  affiliateUrl: "https://jasper.ai?fpr=JASPER_ID",    commission: "30%" },
+    { id: "jasper",     name: "Jasper",           cat: "escritura",    tagline: "Copywriting de alto rendimiento",    pulsoscore: 8.1, free: false, url: "https://jasper.ai",               emoji: "✍️" },
     { id: "copilot",    name: "GitHub Copilot",   cat: "codigo",       tagline: "Pair programmer en tu IDE",          pulsoscore: 9.0, free: false, url: "https://github.com/features/copilot", emoji: "🤖" },
-    { id: "cursor",     name: "Cursor",           cat: "codigo",       tagline: "El IDE que programa contigo",        pulsoscore: 9.3, free: true,  url: "https://cursor.sh",               emoji: "⚡",  affiliateUrl: "https://cursor.sh?ref=CURSOR_ID",    commission: "20%" },
+    { id: "cursor",     name: "Cursor",           cat: "codigo",       tagline: "El IDE que programa contigo",        pulsoscore: 9.3, free: true,  url: "https://cursor.sh",               emoji: "⚡" },
     { id: "midjourney", name: "Midjourney",       cat: "imagen",       tagline: "Arte generativo de nivel profesional", pulsoscore: 9.4, free: false, url: "https://midjourney.com",        emoji: "🎨" },
     { id: "firefly",    name: "Adobe Firefly",    cat: "imagen",       tagline: "Generación segura para marcas",      pulsoscore: 8.5, free: true,  url: "https://firefly.adobe.com",       emoji: "🔥" },
-    { id: "runway",     name: "Runway Gen-4",     cat: "video",        tagline: "El estudio de vídeo IA",             pulsoscore: 9.1, free: true,  url: "https://runwayml.com",            emoji: "🎬",  affiliateUrl: "https://runwayml.com?ref=RUNWAY_ID",  commission: "20%" },
+    { id: "runway",     name: "Runway Gen-4",     cat: "video",        tagline: "El estudio de vídeo IA",             pulsoscore: 9.1, free: true,  url: "https://runwayml.com",            emoji: "🎬" },
     { id: "pika",       name: "Pika 2.0",         cat: "video",        tagline: "Vídeo generativo accesible",         pulsoscore: 8.3, free: true,  url: "https://pika.art",                emoji: "🎞️" },
     { id: "elevenlabs", name: "ElevenLabs",       cat: "audio",        tagline: "Voces sintéticas imposibles de distinguir", pulsoscore: 9.2, free: true, url: "https://elevenlabs.io",   emoji: "🎙️", affiliateUrl: "https://try.elevenlabs.io/iq8461vydd49", commission: "22%" },
     { id: "whisper",    name: "Whisper",          cat: "audio",        tagline: "Transcripción de OpenAI, código abierto", pulsoscore: 8.8, free: true, url: "https://openai.com/whisper",   emoji: "👂" },
     { id: "notionia",   name: "Notion AI",        cat: "productividad",tagline: "Tu workspace con cerebro",           pulsoscore: 8.6, free: false, url: "https://notion.so",               emoji: "📝" },
-    { id: "gamma",      name: "Gamma",            cat: "productividad",tagline: "Presentaciones que se crean solas",  pulsoscore: 8.7, free: true,  url: "https://gamma.app",               emoji: "📊",  affiliateUrl: "https://gamma.app/?r=GAMMA_ID",      commission: "15%" },
+    { id: "gamma",      name: "Gamma",            cat: "productividad",tagline: "Presentaciones que se crean solas",  pulsoscore: 8.7, free: true,  url: "https://gamma.app",               emoji: "📊" },
     { id: "perplexity", name: "Perplexity AI",    cat: "investigacion",tagline: "El buscador que cita sus fuentes",   pulsoscore: 9.0, free: true,  url: "https://perplexity.ai",           emoji: "🔍" },
     { id: "elicit",     name: "Elicit",           cat: "investigacion",tagline: "IA para investigación académica",    pulsoscore: 8.4, free: true,  url: "https://elicit.org",              emoji: "📚" },
     { id: "autogpt",    name: "AutoGPT",          cat: "agentes",      tagline: "El agente autónomo pionero",         pulsoscore: 7.9, free: true,  url: "https://agpt.co",                 emoji: "🤖" },
-    { id: "make",       name: "Make",             cat: "agentes",      tagline: "Automatización sin código con IA",   pulsoscore: 8.8, free: true,  url: "https://make.com",                emoji: "⚙️",  affiliateUrl: "https://www.make.com/en/register?pc=MAKE_ID", commission: "20%" }
+    { id: "make",       name: "Make",             cat: "agentes",      tagline: "Automatización sin código con IA",   pulsoscore: 8.8, free: true,  url: "https://make.com",                emoji: "⚙️" }
   ],
 
   toolCategories: [
