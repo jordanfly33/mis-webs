@@ -36,11 +36,13 @@
     if (!grid || !tools) return;
 
     grid.innerHTML = tools.map(function (t, i) {
-      return '<a href="' + esc(t.url) + '" target="_blank" rel="noopener noreferrer" ' +
-        'class="tool-card reveal" data-cat="' + esc(t.cat) + '" ' +
+      var href     = t.affiliateUrl || t.url;
+      var isAff    = !!t.affiliateUrl;
+      var rel      = isAff ? 'nofollow noopener noreferrer sponsored' : 'noopener noreferrer';
+      return '<a href="' + esc(href) + '" target="_blank" rel="' + rel + '" ' +
+        'class="tool-card reveal' + (isAff ? ' tool-card--aff' : '') + '" data-cat="' + esc(t.cat) + '" ' +
         'style="transition-delay:' + (i * .04) + 's" ' +
-        'aria-label="' + esc(t.name) + ' — ' + esc(t.tagline) + '" ' +
-        'data-label="visitar">' +
+        'aria-label="' + esc(t.name) + ' — ' + esc(t.tagline) + '">' +
         '<span class="tool-emoji" aria-hidden="true">' + t.emoji + '</span>' +
         '<div class="tool-body">' +
           '<p class="tool-name">' + esc(t.name) + '</p>' +
@@ -48,6 +50,7 @@
           '<div class="tool-meta">' +
             '<span class="tool-score">★ ' + t.pulsoscore + '</span>' +
             (t.free ? '<span class="tool-free">Gratis</span>' : '') +
+            (isAff ? '<span class="tool-aff" title="Enlace de afiliado — nos llevamos una comisión si te suscribes">♦ Afiliado</span>' : '') +
           '</div>' +
         '</div>' +
       '</a>';

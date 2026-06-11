@@ -1115,6 +1115,20 @@ body.cursor-hover .cur-label { opacity: 1; }
   color: var(--green);
 }
 
+.tool-aff {
+  font-family: var(--f-mono);
+  font-size: .62rem;
+  padding: .18rem .5rem;
+  border-radius: 999px;
+  background: rgba(184,154,92,.12);
+  color: var(--accent);
+  cursor: help;
+}
+
+.tool-card--aff {
+  border-color: rgba(184,154,92,.25);
+}
+
 /* ── 17. ANALYSIS ──────────────────────────────────────────── */
 .s-analysis {
   position: relative;
